@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(70, 67, 60);
+    color: white;
+}
+header{
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+form[action="/search"] button{
+    background-color: rgb(70, 67, 60);
+    color:white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+form[action="/search"] input[type="text"]{
+    background-color: rgb(70, 67, 60);
+    color:white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sidebar {
+    height: 100vh;
+    width: 100px;;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+.sidebar.active {
+    width: 0; /* Collapse the sidebar */
+    visibility: hidden;
+}
+.menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.sidebar.expanded .menu {
+    display: flex;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+div#content{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 20px;
+}
+div#content div.right{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}   
+div#content div.left{
+    padding-left: 20px;
+    height: 50%;
+    width: 50%;
+    display: flex;
+}
+div.left img{
+    width: 50vw;
+    height: 100vh;
+    border-radius: 30px;
+    padding: 20px;
+    object-fit: cover;
+}
+div#pic img{
+    border-radius: 40px;
+    padding: 20px;
+}
+div#pic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+div.poems {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with minimum column width */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+div.poems > div {
+    background-color: #444; /* Background color for each poem card */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for better appearance */
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+div.poems > div:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+div.poems h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+div.poems p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+div.poem1 img{
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    padding: 20px;
+    object-fit: cover;  
+}
+div.poem2 img{
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    padding: 20px;
+    object-fit: cover;  
+}
+div.poem3 img{
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    padding: 20px;
+    object-fit: cover;  
+}
+div.like{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.upload-kavita {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.upload-kavita h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-kavita form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upload-kavita label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.upload-kavita input,
+.upload-kavita textarea,
+.upload-kavita button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.upload-kavita input[type="file"] {
+    padding: 5px;
+}
+
+.upload-kavita button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-kavita button:hover {
+    background-color: #e68900;
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+footer .footer-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer .footer-links li a:hover {
+    text-decoration: underline;
+}

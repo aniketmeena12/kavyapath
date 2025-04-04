@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAVYA PATH</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <header>
+        <nav>
+            <p>Kavya path</p>
+            <p>cart(0)</p>
+            <form action="/search" method="GET" style="display: inline;">
+                <button type="submit" height ="20px" width="20px" ><i class="ri-search-line"></i></button >
+                <input type="text" name="query" placeholder="Search..." aria-label="Search">
+            </form>
+            <a href="#poety">Explore Hindi Poetry</a>
+            <div class="md:hidden">
+                <ul class="-translate-x-full md:hidden flex flex-col absolute left-0 top-20 text-center h-fit w-full transition-transform duration-300 bg-black text-white p-4">
+                    <li class="text-xl hover:text-blue-500">
+                        <a href="#home" class="cursor-pointer">Home</a></li>
+                        <li class="text-xl hover:text-blue-500">
+                            <a href="#about" class="cursor-pointer">About</a></li>
+                            <li class="text-xl hover:text-blue-500"><a href="#reviews" class="cursor-pointer">Reviews</a></li>
+                        </ul>
+            </div>
+            <script src="script.js"></script>
+        </nav>
+    </header>
+    <main>
+        <div id="content">
+            <div class="left">
+                <img src="img1.jpg" alt="img1" >
+            </div>
+            <div class="right">
+                <div id="kavya">
+                    <h2>KAVYAPATH</h2>
+                    <div id='pic'>
+                        <p>Read now</p>
+                        <img src="img 2.jpg" alt="img2">
+                        <p>Discover more</p>
+                    </div>
+                    <h2>EMBRACE</h2>
+                </div>
+            </div>
+        </div>
+        <div class="poems">
+            <div class="poem1">
+                <img src="img3.jpeg" alt="img3" class="poem-image">
+                <h3>कविता 1</h3>
+                <p>ना प्राण हूँ, ना वायु मैं, ना भीतर की वो चाल हूँ,
+                    ना सात धातुओं का मेल, ना कोशों की मैं ढाल हूँ।
+                    ना वाणी, ना हाथ-पाँव, ना इंद्रियों का जाल हूँ,
+                    मैं तो बस चेतन की ज्योति, आनंदमय प्रकाश हूँ।</p>
+                    <div class="like">
+                        <a href="like"><i class="ri-thumb-up-line"></i></a>
+                    <a href="comment"><i class="ri-message-2-line"></i></a>
+                    <a href="share"><i class="ri-share-forward-line"></i></a>
+                    </div>
+            </div>
+            <div class="poem2">
+                <img src="img4.jpeg" alt="img4" class="poem-image">
+                <h3>कविता 2</h3>
+                <p>जो बिखरे रत्न समेटे, वह संग्रह का यंत्र है,
+                    स्मृति, ज्ञान, अनुभव सबका, अंतर में केंद्र है।
+                    वह रखे सहेज कर सब कुछ, भविष्य की तैयारी,
+                    हर बीते पल का गवाह है, वह बुद्धि की सवारी।</p>
+                    <div class="like">
+                        <a href="like"><i class="ri-thumb-up-line"></i></a>
+                    <a href="comment"><i class="ri-message-2-line"></i></a>
+                    <a href="share"><i class="ri-share-forward-line"></i></a>
+                    </div>
+            </div>
+            <div class="poem3">
+                <img src="img5.jpeg" alt="img5" class="poem-image">
+                <h3>कविता 3</h3>
+                <p>चक्षुरध्ययनम्,
+                    आँखें खोलीं, हुआ प्रकाश,
+                    ज्ञान का आया नया उल्लास।
+                    जो कुछ देखा, जो समझा मन,
+                    बना वही पथ, बना वही धन।
+                    
+                    वचनं श्रवणम्,
+                    शब्दों में गूँजे सत्य विचार,
+                    कानों से बहा ज्ञान अपार।
+                    श्रवण करें, समझें ह्रदय से,
+                    अनुभव करें, हर नव प्रभात से।
+                    
+                    सर्वमेककृतम्,
+                    जब आँख, कान और वाणी मिले,
+                    सत्य की धारा जीवन में खिले।
+                    ज्ञान, भाव और अनुभव का संग,
+                    यही है जीवन का सच्चा रंग।</p>
+                    <div class="like">
+                        <a href="like"><i class="ri-thumb-up-line"></i></a>
+                    <a href="comment"><i class="ri-message-2-line"></i></a>
+                    <a href="share"><i class="ri-share-forward-line"></i></a>
+                    </div>
+            </div>
+        </div>
+        <div class="upload-kavita">
+            <h3>Upload Your Kavita</h3>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="title">Kavita Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter Kavita Title" required>
+        
+                <label for="author">Author Name:</label>
+                <input type="text" id="author" name="author" placeholder="Enter Author Name" required>
+        
+                <label for="content">Kavita Content:</label>
+                <textarea id="content" name="content" rows="5" placeholder="Write your Kavita here..." required></textarea>
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select a Category</option>
+                    <option value="romantic">प्रेम</option>
+                    <option value="motivational">विरह</option>
+                    <option value="spiritual">देशभक्ति</option>
+                    <option value="nature">आदि</option>
+                </select>
+                <label for="image">Upload Kavita Image (Optional):</label>
+                <input type="file" id="image" name="image" accept="image/*">
+        
+                <button type="submit">Submit Kavita</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Kavya Path. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
